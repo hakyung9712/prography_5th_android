@@ -6,20 +6,24 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.MenuItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
+    RecyclerView recyclerView;
+    List<MovieList> movies=new ArrayList<>();
+    MovieAdapter movieAdapter;
+
     ViewPager pager;
-    ConstraintLayout cl;
     private MenuItem BottomNavigation;
 
     @Override
@@ -126,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     };
+
 
 
 }
